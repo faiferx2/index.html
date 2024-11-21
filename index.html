@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impara l'Inglese - Corso Online + 3 Lezioni Gratuite</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #2C3E50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1200/600');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .benefits {
+            padding: 4rem 2rem;
+            background-color: #f5f5f5;
+        }
+
+        .benefits h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .newsletter-section {
+            padding: 4rem 2rem;
+            background-color: #3498DB;
+            color: white;
+            text-align: center;
+        }
+
+        .newsletter-form {
+            max-width: 500px;
+            margin: 2rem auto;
+        }
+
+        .newsletter-form input {
+            width: 70%;
+            padding: 1rem;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .cta-section {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: #2C3E50;
+            color: white;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            margin: 2rem 0;
+        }
+
+        .offer-badge {
+            background-color: #E74C3C;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #E74C3C;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #C0392B;
+        }
+
+        .timer {
+            margin: 2rem 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #E74C3C;
+        }
+
+        .success-message {
+            display: none;
+            background-color: #27AE60;
+            color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+
+        footer {
+            background-color: #34495E;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form input {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .newsletter-form .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>English Academy</h1>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Impara l'Inglese in modo Efficace</h1>
+            <p>Corso completo per principianti e intermedi</p>
+            <div class="offer-badge">OFFERTA SPECIALE: 3 Lezioni Gratuite</div>
+            <a href="#prezzo" class="btn">Inizia Ora</a>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <h2>Cosa Imparerai</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>Grammatica</h3>
+                <p>Padroneggia le basi della grammatica inglese con esercizi pratici</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Conversazione</h3>
+                <p>Migliora le tue capacità di speaking con lezioni interattive</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Pronuncia</h3>
+                <p>Impara la corretta pronuncia con audio di madrelingua</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Certificazione</h3>
+                <p>Ottieni un certificato alla fine del corso</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section">
+        <h2>Ricevi Subito il Tuo Regalo</h2>
+        <p>Iscriviti alla newsletter e ricevi una guida gratuita "Le 100 frasi più utili in inglese"</p>
+        <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="La tua email" required>
+            <button type="submit" class="btn">Ricevi la Guida</button>
+            <div class="success-message" id="successMessage">
+                Grazie! Controlla la tua email per scaricare la guida gratuita.
+            </div>
+        </form>
+    </section>
+
+    <section id="prezzo" class="cta-section">
+        <h2>Offerta Speciale a Tempo Limitato</h2>
+        <div class="price">€15 + 3 Lezioni Gratuite</div>
+        <p>Affrettati! L'offerta delle lezioni gratuite scade tra poco!</p>
+        <div class="timer" id="countdown">Tempo rimanente: 01:00:00</div>
+        <a href="#" class="btn" id="enrollButton">Iscriviti Ora</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 English Academy. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script>
+        // Timer countdown
+        function startTimer(duration, display) {
+            let timer = duration, hours, minutes, seconds;
+            
+            let countdown = setInterval(function () {
+                hours = parseInt(timer / 3600, 10);
+                minutes = parseInt((timer % 3600) / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = "Tempo rimanente: " + hours + ":" + minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    clearInterval(countdown);
+                    display.textContent = "Offerta scaduta! Le 3 lezioni gratuite non sono più disponibili.";
+                    display.style.color = "#E74C3C";
+                }
+            }, 1000);
+        }
+
+        // Gestione form newsletter
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            const successMessage = document.getElementById('successMessage');
+            
+            // Qui potresti aggiungere la logica per salvare l'email
+            console.log('Email sottoscritta:', email);
+            
+            // Mostra il messaggio di successo
+            successMessage.style.display = 'block';
+            
+            // Resetta il form
+            this.reset();
+            
+            // Nascondi il messaggio dopo 5 secondi
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+        });
+
+        window.onload = function () {
+            // Imposta il timer a 1 ora (3600 secondi)
+            let oneHour = 3600;
+            let display = document.querySelector('#countdown');
+            startTimer(oneHour, display);
+
+            // Gestione click sul pulsante di iscrizione
+            document.getElementById('enrollButton').addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Grazie per il tuo interesse! Sarai reindirizzato alla pagina di pagamento. Non dimenticare che l\'offerta include 3 lezioni gratuite!');
+            });
+        };
+    </script>
+</body>
+</html>
